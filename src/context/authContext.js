@@ -8,7 +8,8 @@ const authContext = createContext();
 const AuthContextData = () => {
     const [auth, setAuth] = useState({
         isAuth: false,
-        name: '', email: '', photo: ''
+        name: '', email: '', photo: '',
+        cart: []
     });
 
     /**--- Actions ---*/
@@ -22,16 +23,30 @@ const AuthContextData = () => {
         });
     }
 
+    const addToCart = (pd) => {
+
+        const {cart} = auth;
+
+        let newCart = [...cart, pd]
+
+        setAuth({
+            ...auth,
+            cart: newCart
+        })
+    }
+
     const logoutUser = () => {
         setAuth({
             name: '', email: '', photo: '',
-            isAuth: false
+            isAuth: false,
+            cart: []
         });
     }
 
     // returns
     return {
         auth,
+        addToCart,
         loginUser,
         logoutUser
     }

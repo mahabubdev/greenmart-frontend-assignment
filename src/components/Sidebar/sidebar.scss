@@ -1,0 +1,32 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.side_menu {
+    padding: 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    li {
+        a {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 1rem 0;
+            padding-left: .5rem;
+            text-transform: capitalize;
+            color: white;
+            gap: 0 .5rem;
+        }
+    }
+}
+
+.active {
+    background-color: #5384da !important;
+    color: white;
+}

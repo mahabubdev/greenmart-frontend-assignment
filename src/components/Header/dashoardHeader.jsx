@@ -9,13 +9,9 @@ const Header = ({ user, ...props }) => {
     const { auth, logoutUser } = useAuthContext();
 
     return (
-        <header className="header default">
+        <header className="header dashboard_header">
             <div className="container">
-                <div className="logo_area">
-                    <span className="logo">green mart</span>
-                </div>
-
-                <ul className="menu">
+                <ul className="menu" style={{ display: 'flex', width: '100%' }}>
                     <li>
                         <Link to="/">home</Link>
                     </li>

@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Default from '../layouts/Default';
+import Loading from '../components/loading';
+import ProductCard from '../components/ProductCard';
+import { useAuthContext } from '../context/authContext'
 
 const Home = () => {
 
     const [products, setProducts] = useState([]);
+
+    const authCtx = useAuthContext();
 
     useEffect(() => {
         async function getProducts() {
@@ -14,7 +19,7 @@ const Home = () => {
             })
             .then(p => p.json())
             .then(d => {
-                console.log(d)
+                // console.log(d)
                 setProducts([...d])
             })
             .catch(err => console.log(err))
@@ -25,11 +30,17 @@ const Home = () => {
 
     return (
         <Default>
-            <p>
-                { products.length > 0 ? products.length : (
-                    <span style={{color: 'red'}}>Empty products</span>
-                ) }
-            </p>
+            { products.length > 0 ? (
+                <div className="products_container">
+                    {
+                        products.map(pd => (
+                            <ProductCard key={pd.pid} pd={pd} actions={authCtx} />
+                        ))
+                    }
+                </div>
+            ) : (
+                <Loading />
+            )}
         </Default>
     );
 };

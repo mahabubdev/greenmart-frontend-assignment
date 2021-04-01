@@ -1,0 +1,40 @@
+.table_area {
+    display: table;
+    margin-top: 1.5rem;
+
+
+    tr {
+
+
+        th {
+            text-align: left;
+            background-color: springgreen;
+        }
+
+        td {
+            padding: .5rem 1rem;
+            border-bottom: 1px solid tomato;
+
+            img {
+                height: 5rem;
+                width: auto;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.btn-del {
+    display: inline-flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    padding: .5rem;
+    background-color: #f05033;
+    color: white;
+    border-radius: .2rem;
+    -webkit-border-radius: .2rem;
+    -moz-border-radius: .2rem;
+    -ms-border-radius: .2rem;
+    -o-border-radius: .2rem;
+}

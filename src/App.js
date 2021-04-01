@@ -1,10 +1,16 @@
 // import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import Routers from './routes'
+import { AuthContextProvider } from './context/authContext'
 
 function App() {
+
+  document.title = "Green Mart";
+
   return (
-    <Routers />
+    <AuthContextProvider>
+      <Routers />
+    </AuthContextProvider>
   );
 }
 

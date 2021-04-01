@@ -1,0 +1,36 @@
+.pd_card {
+
+    display: flex;
+    flex-direction: column;
+    gap: .85rem 0;
+    min-height: 350px;
+    cursor: pointer;
+    padding: .75rem;
+    box-shadow: 0 .1rem .5rem 0 rgba(87, 183, 79, 0.25);
+    border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -moz-border-radius: .3em;
+    -ms-border-radius: .3em;
+    -o-border-radius: .3em;
+
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
+
+    .ptxt {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .pinfo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

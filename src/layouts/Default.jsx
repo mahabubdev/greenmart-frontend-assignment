@@ -6,7 +6,7 @@ const DefaultLayout = ({ children, ...props }) => {
         <div className="layout_wrapper default">
             <Header />
             
-            <div className="container_area">
+            <div className="container">
                 { children }
             </div>
         </div>
