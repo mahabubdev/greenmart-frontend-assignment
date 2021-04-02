@@ -34,3 +34,28 @@
         }
     }
 }
+
+
+/**========================================*
+ * RESPONSIVE CSS
+ *========================================*/
+
+ // max 1100px
+@media (max-width: 1099.9px) {
+    .pd_card {
+        min-height: 250px;
+        gap: .7rem 0;
+
+
+        .ptxt {    
+            h3 {
+                font-size: 1rem;
+            }
+            .pinfo {
+                .btn-pr {
+                    padding: .7rem 1.4rem;
+                }
+            }
+        }
+    }
+}

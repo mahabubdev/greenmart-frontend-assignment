@@ -38,6 +38,11 @@
                 -ms-border-radius: .35rem;
                 -o-border-radius: .35rem;
             }
+            transition: all .4s;
+            -webkit-transition: all .4s;
+            -moz-transition: all .4s;
+            -ms-transition: all .4s;
+            -o-transition: all .4s;
         }
 
         display: inline-flex;
@@ -47,5 +52,73 @@
         padding-left: 0;
         margin: 0;
         gap: 0 1rem;
+    }
+}
+
+.tog {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+// for small screens
+.small {
+    .menu {
+        li {
+            a {
+                color: white;
+            }
+        }
+        flex-direction: column;
+        position: fixed;
+        width: 300px;
+        right: -300px;
+        top: 0;
+        height: 100%;
+        background-color: #4242e6;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem 0;
+        transition: all .3s ease-in-out;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+}
+}
+
+.menu-btn {
+    font-size: 1.5rem;
+    padding: .5rem;
+}
+
+.menu {
+    .cls-btn {
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+        padding: .5rem;
+        color: white;
+
+        svg {
+            font-size: 1.5rem;
+            path {
+                stroke: white;
+            }
+        }
+    }
+}
+
+.open {
+    right: 0 !important;
+}
+
+
+@media (max-width: 539.99px) {
+    .open {
+        max-width: 100%;
     }
 }

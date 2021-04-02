@@ -99,7 +99,7 @@ const Home = () => {
                             }
                         </div>
                     ) : (
-                        <p style={{ color: 'red' }}>Sorry! There is no product now.</p>
+                        <p style={{ color: 'red', textAlign: 'center', marginTop: '1rem' }}>Sorry! There is no product now.</p>
                     )
                 )
             }

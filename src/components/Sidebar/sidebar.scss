@@ -30,3 +30,16 @@
     background-color: #5384da !important;
     color: white;
 }
+
+
+
+/**========================================*
+ * RESPONSIVE CSS
+ *========================================*/
+
+ // max 1100px
+@media (max-width: 1099.9px) {
+    .side_menu {
+        width: 100%;
+    }
+}

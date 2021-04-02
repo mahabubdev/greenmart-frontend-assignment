@@ -4,9 +4,12 @@ import { NavLink } from 'react-router-dom';
 import { VscAdd } from "react-icons/vsc";
 import { BsGrid } from "react-icons/bs";
 
-const AdminSidebar = () => {
+const AdminSidebar = ({ togSide }) => {
+
+    let toggleSidebar = togSide === true ? 'open': '';
+
     return (
-        <div className="sidebar">
+        <div className={`sidebar ${toggleSidebar}`}>
             <div className="logo_area">
                 <span style={{color: 'white'}} className="logo">green mart</span>
             </div>
