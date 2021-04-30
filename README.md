@@ -1,6 +1,15 @@
 # Green Mart - Assignment 10
 
-### Frontend part
+### [Backend repository link (click here)](https://github.com/mahabubdev/green-mart-server-assignment)
+
+## Features
+```
+  * Firebase handled Authentication
+  * Products CRUD with Admin panel
+  * Dynamic products in homepage
+  * Cart, Checkout & Orders
+  * Working Search API and result
+```
 
 ## Installation
 ```
